@@ -1,33 +1,33 @@
 import styled from "styled-components";
-import Beens from "../../resourses/images/Beens.png";
+import Beens from "../../resourses/images/Beens/Beens.png";
 
 const Section = styled.section`
-display: flex;
-justify-content: center;
-width: 100%;
+   display: flex;
+   justify-content: center;
+   width: 100%;
 `;
 
 const Wrapper = styled.div`
-max-width: 700px;
-margin-top: 80px;
-margin-bottom: 100px;
+   max-width: 700px;
+   margin-top: 80px;
+   margin-bottom: 100px;
 `;
 
 const TextTitle = styled.h2`
-text-align: center;
-font-size: 24px;
+   text-align: center;
+   font-size: 24px;
 `;
 
 const DescriptionText = styled.p`
-text-align: center;
-hyphens: auto;
-display: block;
-font-size: 14px;
+   text-align: center;
+   hyphens: auto;
+   display: block;
+   font-size: 16px;
 `;
 
 const BeensFolder = styled.div`
-display: flex;
-justify-content: center;
+   display: flex;
+   justify-content: center;
 `;
 
 const AppInfo = () => {

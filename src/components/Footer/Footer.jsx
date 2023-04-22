@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Beens from "../../resourses/images/Beens.png";
+import Beens from "../../resourses/images/Beens/Beens.png";
 
 const FooterSection = styled.footer`
    display: flex;
@@ -18,18 +18,19 @@ const NavList = styled.ul`
    
 `;
 const NavListItem = styled.li`
-display: inline-block;
+   display: inline-block;
    margin-right: 22px;
    transition: transform 0.2s ease-in-out;
    cursor: pointer;
    &:hover{
       transform: scale(1.1);
+      text-shadow: .5px .5px 2px rgba(0, 0, 0, .6);
    }
 `;
 const BeensFolder = styled.div`
 display: flex;
 justify-content: center;
-`
+`;
 const Footer = () => {
    return (
       <FooterSection>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import background from "../../resourses/images/MainHeader.png";
-import pngBeens from "../../resourses/images/PngBeens.png"
+import background from "../../resourses/images/backgrounds/MainHeader.png";
+import pngBeens from "../../resourses/images/Beens/PngBeens.png"
 
 const Header = styled.div`
    color: white;
@@ -27,7 +27,7 @@ const HeaderNavBar = styled.nav`
    }
 `;
 const HeaderNavli = styled.li`
-   font-size: 12px;
+   font-size: 16px;
    display: inline-block;
    margin-right: 40px;
    transition: transform 0.2s ease-in-out;
@@ -59,12 +59,11 @@ const Button = styled.button`
    transition: transform 0.2s ease-in-out;
    cursor: pointer;
    &:hover{
-      
       background-color: rgba(0, 0, 0, .4);
       transform: scale(1.1);
       box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
-   }
-`;
+   }`;
+
 const AppHeader = () => {
    return (
       <Header>
