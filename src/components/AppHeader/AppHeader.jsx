@@ -30,16 +30,16 @@ const HeaderText = styled.h3`
    text-align: center;
 `;
 const Button = styled.button`
-   font-size: 14px;
+   font-size: 16px;
    background: rgba(0, 0, 0, 0);
    color: white;
    border: 2px solid white;
-   width: 120px;
-   height: 30px;
+   width: 140px;
+   height: 40px;
    border-radius: 3px;
    display: block;
    margin: 0 auto;
-   margin-top: 25px;
+   margin-top: 40px;
 `;
 const AppHeader = () => {
    return (
@@ -50,21 +50,21 @@ const AppHeader = () => {
                <HeaderNavli>Our coffee</HeaderNavli>
                <HeaderNavli>For your pleasure</HeaderNavli>
             </ul>
-            
+
          </HeaderNavBar>
          <HeaderTitleText>
-               Everything You Love About Coffee
-            </HeaderTitleText>
-            <HeaderText>
-               We makes every day full of energy and taste
-            </HeaderText>
-            <HeaderText>
-               Want to try our beans?
-            </HeaderText>
-            <Button>
-               More
-            </Button>
-         
+            Everything You Love About Coffee
+         </HeaderTitleText>
+         <HeaderText>
+            We makes every day full of energy and taste
+         </HeaderText>
+         <HeaderText>
+            Want to try our beans?
+         </HeaderText>
+         <Button>
+            More
+         </Button>
+
       </Header>
    )
 }

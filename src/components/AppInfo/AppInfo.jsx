@@ -14,7 +14,8 @@ margin-bottom: 100px;
 
 const TextTitle = styled.h2`
 text-align: center;
-font-size: 24px;`
+font-size: 24px;
+`;
 
 
 const DescriptionText = styled.p`
@@ -35,9 +36,9 @@ const AppInfo = () => {
                is song that held help face.</DescriptionText>
             <DescriptionText>
                Now residence dashwoods she excellent you. Shade being under his bed her, Much read on as draw.
-                Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined day end marriage. 
-                Eagerness furniture set preserved far recommend. Did even but nor are most gave hope.
-                 Secure active living depend son repair day ladies now.
+               Blessing for ignorant exercise any yourself unpacked. Pleasant horrible but confined day end marriage.
+               Eagerness furniture set preserved far recommend. Did even but nor are most gave hope.
+               Secure active living depend son repair day ladies now.
             </DescriptionText>
 
          </Wrapper>
