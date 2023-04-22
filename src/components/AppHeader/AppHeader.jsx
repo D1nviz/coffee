@@ -5,7 +5,7 @@ import pngBeens from "../../resourses/images/Beens/PngBeens.png"
 const Header = styled.div`
    color: white;
    width: 100%;
-   height: 713px;
+   height: 100vh;
    background: no-repeat url(${background});
    background-size: cover;
 
