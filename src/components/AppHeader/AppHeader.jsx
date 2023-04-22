@@ -1,6 +1,11 @@
 import styled from "styled-components";
+import { useContext } from "react";
+
+import { sectionContext } from "../Context";
+
 import background from "../../resourses/images/backgrounds/MainHeader.png";
 import pngBeens from "../../resourses/images/Beens/PngBeens.png"
+
 
 const Header = styled.div`
    color: white;
@@ -35,16 +40,18 @@ const HeaderNavli = styled.li`
    &:hover{
       transform: scale(1.1);
    }
-`
+`;
 const HeaderTitleText = styled.h1`
    font-size: 40px;
    text-align: center;
    margin-top: 110px
-   `;
+`;
+
 const HeaderText = styled.h3`
    font-size: 24px;
    text-align: center;
 `;
+
 const Button = styled.button`
    font-size: 16px;
    background: rgba(0, 0, 0, 0);
@@ -64,7 +71,10 @@ const Button = styled.button`
       box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
    }`;
 
-const AppHeader = () => {
+   const AppHeader = () => {
+   const {myRef} = useContext(sectionContext);
+   const executeScroll = () => myRef.current.scrollIntoView();
+
    return (
       <Header>
          <HeaderNavBar>
@@ -84,7 +94,7 @@ const AppHeader = () => {
          <HeaderText>
             Want to try our beans?
          </HeaderText>
-         <Button>
+         <Button onClick={executeScroll}>
             More
          </Button>
 

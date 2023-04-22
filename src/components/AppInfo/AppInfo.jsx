@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import Beens from "../../resourses/images/Beens/Beens.png";
-
+import { useContext } from "react";
+import { sectionContext } from "../Context";
 const Section = styled.section`
+   
    display: flex;
    justify-content: center;
    width: 100%;
@@ -31,8 +33,9 @@ const BeensFolder = styled.div`
 `;
 
 const AppInfo = () => {
+   const {myRef} = useContext(sectionContext);
    return (
-      <Section>
+      <Section ref={myRef}>
          <Wrapper>
             <TextTitle>About us</TextTitle>
             <BeensFolder>

@@ -1,5 +1,6 @@
 import MainPage from "../pages/Main/MainPage";
 import Footer from "../Footer/Footer";
+ 
 function App() {
   return (
     <>
