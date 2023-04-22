@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import background from "../../resourses/images/MainHeader.png";
-import "./appHeader.css";
 import pngBeens from "../../resourses/images/PngBeens.png"
 
 const Header = styled.div`
-
+   color: white;
    width: 100%;
    height: 713px;
    background: no-repeat url(${background});
@@ -13,22 +12,13 @@ const Header = styled.div`
 `;
 const HeaderNavBar = styled.nav`
    padding-top: 30px;
-   margin-left: 110px;
    color: white;
-   &:before {
-      content:"";
-      display: block;
-      width: 100px;
-      padding-top:
-      heignt: 100px;
-      background-image: url(${pngBeens});
-   }
-   
+   margin-left: 120px;
 `;
 const HeaderNavli = styled.li`
    font-size: 12px;
    display: inline-block;
-   margin-left: 40px;
+   margin-right: 40px;
 `
 const HeaderTitleText = styled.h1`
    font-size: 40px;
@@ -60,7 +50,9 @@ const AppHeader = () => {
                <HeaderNavli>Our coffee</HeaderNavli>
                <HeaderNavli>For your pleasure</HeaderNavli>
             </ul>
-            <HeaderTitleText>
+            
+         </HeaderNavBar>
+         <HeaderTitleText>
                Everything You Love About Coffee
             </HeaderTitleText>
             <HeaderText>
@@ -72,7 +64,6 @@ const AppHeader = () => {
             <Button>
                More
             </Button>
-         </HeaderNavBar>
          
       </Header>
    )

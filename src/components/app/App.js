@@ -1,13 +1,13 @@
 import AppHeader from "../AppHeader/AppHeader";
 import AppInfo from "../AppInfo/AppInfo";
-import './App.css';
-
+import AppBest from "../AppBest/AppBest";
 function App() {
   return (
-    <div className="App">
+    <>
       <AppHeader/>
       <AppInfo/>
-    </div>
+      <AppBest/>
+    </>
   );
 }
 
