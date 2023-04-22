@@ -11,14 +11,30 @@ const Header = styled.div`
 
 `;
 const HeaderNavBar = styled.nav`
+   position: relative;
    padding-top: 30px;
    color: white;
    margin-left: 120px;
+   &:before {
+   content: "";
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   background-image: url(${pngBeens});
+   background-size: cover;
+   left: -5px;
+   bottom: -4px;
+   }
 `;
 const HeaderNavli = styled.li`
    font-size: 12px;
    display: inline-block;
    margin-right: 40px;
+   transition: transform 0.2s ease-in-out;
+   cursor: pointer;
+   &:hover{
+      transform: scale(1.1);
+   }
 `
 const HeaderTitleText = styled.h1`
    font-size: 40px;
@@ -40,6 +56,14 @@ const Button = styled.button`
    display: block;
    margin: 0 auto;
    margin-top: 40px;
+   transition: transform 0.2s ease-in-out;
+   cursor: pointer;
+   &:hover{
+      
+      background-color: rgba(0, 0, 0, .4);
+      transform: scale(1.1);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
+   }
 `;
 const AppHeader = () => {
    return (

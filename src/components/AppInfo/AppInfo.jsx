@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Beens from "../../resourses/images/Beens.png";
 
 const Section = styled.section`
 display: flex;
@@ -17,18 +18,26 @@ text-align: center;
 font-size: 24px;
 `;
 
-
 const DescriptionText = styled.p`
 text-align: center;
 hyphens: auto;
 display: block;
 font-size: 14px;
 `;
+
+const BeensFolder = styled.div`
+display: flex;
+justify-content: center;
+`;
+
 const AppInfo = () => {
    return (
       <Section>
          <Wrapper>
             <TextTitle>About us</TextTitle>
+            <BeensFolder>
+               <img src={Beens} alt="" />
+            </BeensFolder>
             <DescriptionText>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.
                Afraid at highly months do things on at. Situation recommend objection do intention
                so questions. As greatly removed calling pleased improve an. Last ask him cold feel

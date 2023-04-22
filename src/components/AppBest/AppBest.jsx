@@ -48,7 +48,9 @@ const ItemCardPrice = styled.div`
    position: absolute;
    bottom: 20px;
    left: 150px;
-`
+`;
+
+
 const AppBest = () => {
    return (
       <>

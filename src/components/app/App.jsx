@@ -1,12 +1,10 @@
-import AppHeader from "../AppHeader/AppHeader";
-import AppInfo from "../AppInfo/AppInfo";
-import AppBest from "../AppBest/AppBest";
+import MainPage from "../pages/Main/MainPage";
+import Footer from "../Footer/Footer";
 function App() {
   return (
     <>
-      <AppHeader/>
-      <AppInfo/>
-      <AppBest/>
+      <MainPage/>
+      <Footer/>
     </>
   );
 }
