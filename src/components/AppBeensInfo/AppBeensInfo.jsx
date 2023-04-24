@@ -16,6 +16,12 @@ const Wrapper = styled.div`
 const ImageContainer = styled.div`
    width: 280px;
    height: 355px;
+   img {
+      -webkit-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.26);
+      -moz-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.26);
+      box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.26);
+
+   }
 `
 const ArticleContainer = styled.div`
    text-align: center;
@@ -30,10 +36,10 @@ const ArticleContainerImage = styled.div`
    width: 100%;
    display: flex;
    justify-content: center;
-   image {
-      box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
-   }
+   
 `;
+
+
 const ArticleContainerText = styled.article`
    font-size: 100%
 `;
@@ -48,10 +54,10 @@ const AppBeensInfo = () => {
             <ArticleContainer>
                <ArticleContainerTitle>About our beans</ArticleContainerTitle>
                <ArticleContainerImage><img src={beanImage} alt="beanImage" /></ArticleContainerImage>
-               <ArticleContainerText>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.<br/><br/>
+               <ArticleContainerText>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.<br /><br />
                   Afraid at highly months do things on at. Situation recommend objection do intention
                   so questions.
-                  <br/>As greatly removed calling pleased improve an. Last ask him cold feel
+                  <br />As greatly removed calling pleased improve an. Last ask him cold feel
                   met spot shy want. Children me laughing we prospect answered followed. At it went
                   is song that held help face.</ArticleContainerText>
             </ArticleContainer>
