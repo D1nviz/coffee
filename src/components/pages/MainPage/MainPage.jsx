@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import AppHeader from "../../AppHeader/AppHeader";
+import AppBanner from "../../AppBanner/AppBanner";
 import AppInfo from "../../AppInfo/AppInfo";
 import AppBest from "../../AppBest/AppBest";
 import { sectionContext } from "../../Context";
@@ -9,7 +9,7 @@ const MainPage = () => {
    return (
       <>
          <sectionContext.Provider value={{myRef}}>
-         <AppHeader />
+         <AppBanner />
          <AppInfo />
          <AppBest />
          </sectionContext.Provider>

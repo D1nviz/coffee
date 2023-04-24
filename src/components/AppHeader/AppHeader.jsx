@@ -1,25 +1,20 @@
 import styled from "styled-components";
-import { useContext } from "react";
-
-import { sectionContext } from "../Context";
-
-import background from "../../resourses/images/backgrounds/MainHeader.png";
-import pngBeens from "../../resourses/images/Beens/PngBeens.png"
-
+import background from "../../resourses/images/backgrounds/Header.png";
+import pngBeens from "../../resourses/images/Beens/PngBeens.png";
 
 const Header = styled.div`
    color: white;
    width: 100%;
-   height: 100vh;
+   height: 30vh;
    background: no-repeat url(${background});
    background-size: cover;
 
 `;
-const HeaderNavBar = styled.nav`
+const HeaderNav = styled.nav`
    position: relative;
    padding-top: 30px;
    color: white;
-   margin-left: 120px;
+   margin-left: 12%;
    &:before {
    content: "";
    position: absolute;
@@ -27,12 +22,12 @@ const HeaderNavBar = styled.nav`
    height: 50px;
    background-image: url(${pngBeens});
    background-size: cover;
-   left: -5px;
-   bottom: -4px;
+   left: 0;
+   bottom: -5%;
    }
 `;
-const HeaderNavli = styled.li`
-   font-size: 16px;
+const HeaderNavlist = styled.li`
+   font-size: 1em;
    display: inline-block;
    margin-right: 40px;
    transition: transform 0.2s ease-in-out;
@@ -41,65 +36,29 @@ const HeaderNavli = styled.li`
       transform: scale(1.1);
    }
 `;
-const HeaderTitleText = styled.h1`
-   font-size: 40px;
+const HeaderTitle = styled.h1`
+   font-size: 200%;
    text-align: center;
-   margin-top: 110px
-`;
-
-const HeaderText = styled.h3`
-   font-size: 24px;
-   text-align: center;
-`;
-
-const Button = styled.button`
-   font-size: 16px;
-   background: rgba(0, 0, 0, 0);
-   color: white;
-   border: 2px solid white;
-   width: 140px;
-   height: 40px;
-   border-radius: 3px;
-   display: block;
-   margin: 0 auto;
-   margin-top: 40px;
-   transition: transform 0.2s ease-in-out;
-   cursor: pointer;
-   &:hover{
-      background-color: rgba(0, 0, 0, .4);
-      transform: scale(1.1);
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
-   }`;
-
-   const AppHeader = () => {
-   const {myRef} = useContext(sectionContext);
-   const executeScroll = () => myRef.current.scrollIntoView();
+   margin-top: 2%;
+   font-weight:400;
+`
+const AppHeader = () => {
 
    return (
       <Header>
-         <HeaderNavBar>
+         <HeaderNav>
             <ul>
-               <HeaderNavli>Coffe house</HeaderNavli>
-               <HeaderNavli>Our coffee</HeaderNavli>
-               <HeaderNavli>For your pleasure</HeaderNavli>
+               <HeaderNavlist>Coffe house</HeaderNavlist>
+               <HeaderNavlist>Our coffee</HeaderNavlist>
+               <HeaderNavlist>For your pleasure</HeaderNavlist>
             </ul>
 
-         </HeaderNavBar>
-         <HeaderTitleText>
-            Everything You Love About Coffee
-         </HeaderTitleText>
-         <HeaderText>
-            We makes every day full of energy and taste
-         </HeaderText>
-         <HeaderText>
-            Want to try our beans?
-         </HeaderText>
-         <Button onClick={executeScroll}>
-            More
-         </Button>
-
-      </Header>
+         </HeaderNav >
+         
+         <HeaderTitle>OurCoffee</HeaderTitle>
+      </Header >
    )
 }
+
 
 export default AppHeader;
