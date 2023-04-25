@@ -21,12 +21,12 @@ const CoffeeList = () => {
    return (
       <Section>
          <Wrapper>
-            <div style={{backgroundColor: "green", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "green", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "green", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "green", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "green", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "green", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
          </Wrapper>
          
       </Section>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link, NavLink } from 'react-router-dom';
 import { useContext } from "react";
 
 import { sectionContext } from "../Context";
@@ -15,7 +16,7 @@ const Header = styled.div`
    background-size: cover;
 
 `;
-const HeaderNavBar = styled.nav`
+const HeaderNav = styled.nav`
    position: relative;
    padding-top: 30px;
    color: white;
@@ -31,7 +32,7 @@ const HeaderNavBar = styled.nav`
    bottom: -4px;
    }
 `;
-const HeaderNavli = styled.li`
+const HeaderNavlist = styled.li`
    font-size: 16px;
    display: inline-block;
    margin-right: 40px;
@@ -71,20 +72,23 @@ const Button = styled.button`
       box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
    }`;
 
-   const AppBanner = () => {
-   const {myRef} = useContext(sectionContext);
+const AppBanner = () => {
+   const { myRef } = useContext(sectionContext);
    const executeScroll = () => myRef.current.scrollIntoView();
 
    return (
       <Header>
-         <HeaderNavBar>
+         <HeaderNav>
             <ul>
-               <HeaderNavli>Coffe house</HeaderNavli>
-               <HeaderNavli>Our coffee</HeaderNavli>
-               <HeaderNavli>For your pleasure</HeaderNavli>
+               <HeaderNavlist>
+                  <Link to="/"><span>Coffe house</span></Link>
+               </HeaderNavlist>
+               <HeaderNavlist>
+                  <Link to="/our-coffee"> <span>Our coffee</span></Link>
+               </HeaderNavlist>
+               <HeaderNavlist><span>For your pleasure</span></HeaderNavlist>
             </ul>
-
-         </HeaderNavBar>
+         </HeaderNav>
          <HeaderTitleText>
             Everything You Love About Coffee
          </HeaderTitleText>

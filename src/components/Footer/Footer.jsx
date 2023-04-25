@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import Beens from "../../resourses/images/Beens/Beens.png";
+import { Link, NavLink } from 'react-router-dom';
+
+import Beans from "../../resourses/images/Beens/Beens.png";
 
 const FooterSection = styled.footer`
    display: flex;
@@ -37,13 +39,13 @@ const Footer = () => {
          <Wrapper>
             <NavBar>
                <NavList>
-                  <NavListItem>Coffe house</NavListItem>
-                  <NavListItem>Our coffee</NavListItem>
+                  <NavListItem> <Link to="/"><span>Coffe house</span></Link></NavListItem>
+                  <NavListItem><Link to="/our-coffee"> <span>Our coffee</span></Link></NavListItem>
                   <NavListItem>For your pleasure</NavListItem>
                </NavList>
             </NavBar>
             <BeensFolder>
-               <img src={Beens} alt="" />
+               <img src={Beans} alt="Beans" />
             </BeensFolder>
          </Wrapper>
       </FooterSection>
