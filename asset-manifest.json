@@ -1,18 +1,22 @@
 {
   "files": {
-    "main.css": "/coffee/static/css/main.35670cc3.css",
-    "main.js": "/coffee/static/js/main.d6ed30a1.js",
+    "main.css": "/coffee/static/css/main.90257244.css",
+    "main.js": "/coffee/static/js/main.c860f5bb.js",
     "static/media/MramorBg.jpg": "/coffee/static/media/MramorBg.e73347dac8273b8cda2a.jpg",
     "static/media/MainHeader.png": "/coffee/static/media/MainHeader.aeee923e2d19311737a1.png",
+    "static/media/forYourPleasureBg.png": "/coffee/static/media/forYourPleasureBg.35c27187490c5bc2a38d.png",
+    "static/media/ourCoffee.png": "/coffee/static/media/ourCoffee.1dca390128f7685e23ea.png",
+    "static/media/CoffeGirl.jpg": "/coffee/static/media/CoffeGirl.dc9ee360d87163ff99ee.jpg",
+    "static/media/ourPleasureImg.png": "/coffee/static/media/ourPleasureImg.e11f8df88fa82c6f5fdd.png",
     "static/media/AromisticoCoffee.png": "/coffee/static/media/AromisticoCoffee.4c831881bdeb0e226910.png",
     "static/media/SolimoCoffee.png": "/coffee/static/media/SolimoCoffee.04652e2dc0d5fe1e2c12.png",
     "static/media/PrestoCoffee.png": "/coffee/static/media/PrestoCoffee.204060d0bc63cb9ef032.png",
     "index.html": "/coffee/index.html",
-    "main.35670cc3.css.map": "/coffee/static/css/main.35670cc3.css.map",
-    "main.d6ed30a1.js.map": "/coffee/static/js/main.d6ed30a1.js.map"
+    "main.90257244.css.map": "/coffee/static/css/main.90257244.css.map",
+    "main.c860f5bb.js.map": "/coffee/static/js/main.c860f5bb.js.map"
   },
   "entrypoints": [
-    "static/css/main.35670cc3.css",
-    "static/js/main.d6ed30a1.js"
+    "static/css/main.90257244.css",
+    "static/js/main.c860f5bb.js"
   ]
 }
