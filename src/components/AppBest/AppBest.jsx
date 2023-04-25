@@ -4,7 +4,6 @@ import background from "../../resourses/images/backgrounds/MramorBg.jpg"
 import solimoCoffee from "../../resourses/images/Coffee/SolimoCoffee.png";
 import prestoCoffee from "../../resourses/images/Coffee/PrestoCoffee.png";
 import aromisticoCoffee from "../../resourses/images/Coffee/AromisticoCoffee.png";
-import { ref } from "yup";
 import { useContext } from "react";
 
 const Section = styled.section`
@@ -28,34 +27,34 @@ const CardFolder = styled.div`
    width: 800px;
    display: flex;
    justify-content: space-between;
-`;
-const ItemCard = styled.div`
-   position: relative;
-   width: 220px;
-   height: 240px;
-   background-color: rgba(255, 255, 255, 0.5);
-   display:flex;
-   flex-direction: column;
-   align-items: center;
-   font-size: 14px;
-   border-radius: 8px;
-   transition: all .3s ease-in-out;
-   cursor: pointer;
-   &:hover{
-      box-shadow: 0px 0px 15px 1px #7e3f089d;
-      transform: scale(1.1);
+   div {
+      position: relative;
+      width: 220px;
+      height: 240px;
+      background-color: rgba(255, 255, 255, 0.5);
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 14px;
+      border-radius: 8px;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      &:hover{
+         box-shadow: 0px 0px 15px 1px #7e3f089d;
+         transform: scale(1.1);
+      }
+      img {
+         margin-top:20px;
+      }
+      span {
+         font-size: 14px;
+         font-weight: 800;
+         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+         position: absolute;
+         bottom: 20px;
+         left: 150px;
+      }
    }
-`;
-const ItemCardEntry = styled.div`
-   margin-top:20px;
-`;
-const ItemCardPrice = styled.div`
-   font-size: 14px;
-   font-weight: 800;
-   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-   position: absolute;
-   bottom: 20px;
-   left: 150px;
 `;
 
 const AppBest = () => {
@@ -65,27 +64,27 @@ const AppBest = () => {
             <Wrapper>
                <h3>Our best</h3>
                <CardFolder>
-                  <ItemCard>
-                     <ItemCardEntry><img src={solimoCoffee} alt="" /></ItemCardEntry>
+                  <div>
+                     <img src={solimoCoffee} alt="Coffee beans" />
                      <p>Solimo Coffee Beans 2 kg</p>
-                     <ItemCardPrice>
+                     <span>
                         10.99$
-                     </ItemCardPrice>
-                  </ItemCard>
-                  <ItemCard>
-                     <ItemCardEntry><img src={prestoCoffee} alt="" /></ItemCardEntry>
+                     </span>
+                  </div>
+                  <div>
+                     <img src={prestoCoffee} alt="Coffee beans" />
                      <p>Presto Coffee Beans 1 kg</p>
-                     <ItemCardPrice>
+                     <span>
                         15.99$
-                     </ItemCardPrice>
-                  </ItemCard>
-                  <ItemCard>
-                     <ItemCardEntry><img src={aromisticoCoffee} alt="" /></ItemCardEntry>
+                     </span>
+                  </div>
+                  <div>
+                     <img src={aromisticoCoffee} alt="Coffee beans" />
                      <p>AROMISTICO Coffee 1 kg</p>
-                     <ItemCardPrice>
+                     <span>
                         6.99$
-                     </ItemCardPrice>
-                  </ItemCard>
+                     </span>
+                  </div>
                </CardFolder>
             </Wrapper>
          </Section>

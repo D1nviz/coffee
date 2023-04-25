@@ -16,6 +16,24 @@ const InputContainer = styled.div`
    justify-content: space-between;
    align-items: center;
    width: 300px;
+   input {
+      width: 180px;
+      height: 30px;
+      border-radius: 5px;
+      border: none;
+      padding-left: 10px;
+      transition: .2s ease-in-out;
+      -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+      -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+      box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+      &:focus,
+      &:hover {
+      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+      outline:none;
+      }
+   }
 `;
 const FilterContainer = styled.div`
    display: flex;
@@ -39,29 +57,9 @@ const FilterContainer = styled.div`
       &:hover {
          transform: scale(1.1)
       }
+   }
+`;
 
-   }
-   
-`;
-const SearhInput = styled.input`
-   width: 180px;
-   height: 30px;
-   border-radius: 5px;
-   border: none;
-   padding-left: 10px;
-   transition: .2s ease-in-out;
-   -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
-   -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
-   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
-   &:focus,
-   &:hover {
-      -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-      -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-      box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-      outline:none;
-   }
-   
-`;
 const AppSearch = () => {
    return (
       <>
@@ -69,7 +67,7 @@ const AppSearch = () => {
             <Wrapper>
                <InputContainer>
                   <label for="search">Looking for </label>
-                  <SearhInput type="text" name="search" autoComplete="off" placeholder="start typing here..." />
+                  <input type="text" name="search" autoComplete="off" placeholder="start typing here..." />
                </InputContainer>
                <FilterContainer>
                   <p>Or filter</p>
@@ -79,7 +77,6 @@ const AppSearch = () => {
                      <button>Columbia</button>
                   </div>
                </FilterContainer>
-
             </Wrapper>
          </Container>
 

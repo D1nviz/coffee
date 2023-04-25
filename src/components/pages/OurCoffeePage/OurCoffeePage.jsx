@@ -16,14 +16,17 @@ const OurCoffePage = () => {
             text={"Our coffee"}
             background={background} 
          />
-         <AppProductsInfo
-            description={description}
-            title={"About our beans"}
-            image={coffeeGirl}
-            alt={"Aesthetic coffee"}
-         />
-         <AppSearch />
-         <CoffeeList />
+         <main>
+            <AppProductsInfo
+               description={description}
+               title={"About our beans"}
+               image={coffeeGirl}
+               alt={"Aesthetic coffee"}
+            />
+            <AppSearch />
+            <CoffeeList />
+         </main>
+         
       </>
    )
 }

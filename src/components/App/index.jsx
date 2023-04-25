@@ -8,15 +8,11 @@ import {lazy, Suspense} from "react";
 function App() {
   return (
     <Router basename="coffee" >
-      <main>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
           <Route path="/our-coffee" element={<OurCoffePage/>}/>
           <Route path="/for-your-pleasure" element={<ForYourPleasurePage/>}/>
         </Routes>
-      </main>
-     
-      
       <Footer/>
     </Router>
   );

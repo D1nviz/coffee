@@ -58,12 +58,15 @@ const Button = styled.button`
    }
       &:hover {
          color: #fff;
-         transform: scale(1.1)
+         transform: scale(1.1);
+         -webkit-box-shadow: 0px 0px 36px 0px rgba(138,84,14,0.6);
+         -moz-box-shadow: 0px 0px 36px 0px rgba(138,84,14,0.6);
+         box-shadow: 0px 0px 36px 0px rgba(138,84,14,0.6);
       }
       &:before {
          top: 100%;
          left: 100%;
-         transition: all .7s;
+         transition: all .5s;
       }
       &:hover:before{
          top: -30px;

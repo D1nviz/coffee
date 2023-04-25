@@ -12,11 +12,14 @@ const MainPage = () => {
          <sectionContext.Provider value={{ myRef }}>
             <sectionAboutContext.Provider value={{appBestRef}}>
                <AppBanner />
-               <AppInfo />
-               <AppBest />
+               <main>
+                  <AppInfo />
+                  <AppBest />
+               </main>
             </sectionAboutContext.Provider>
          </sectionContext.Provider>
       </>
+      
    )
 }
 

@@ -18,13 +18,15 @@ const ForYourPleasurePage = () => {
             text={"For your pleasure"} 
             background={background}
          />
-         <AppProductsInfo 
-            title={"About our goods"}  
-            description={description}
-            image={cupOfCoffee}
-            alt={"Cup of Coffee"}
-         />
-         <CoffeeList/>
+         <main>
+            <AppProductsInfo 
+               title={"About our goods"}  
+               description={description}
+               image={cupOfCoffee}
+               alt={"Cup of Coffee"}
+            />
+            <CoffeeList/>
+         </main>
       </>
    )
 }
