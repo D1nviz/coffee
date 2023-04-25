@@ -50,6 +50,9 @@ const SearhInput = styled.input`
    border: none;
    padding-left: 10px;
    transition: .2s ease-in-out;
+   -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+   -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+   box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
    &:focus,
    &:hover {
       -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
@@ -66,7 +69,7 @@ const AppSearch = () => {
             <Wrapper>
                <InputContainer>
                   <label for="search">Looking for </label>
-                  <SearhInput type="text" name="search" autoComplete="off"  placeholder="start typing here..." />
+                  <SearhInput type="text" name="search" autoComplete="off" placeholder="start typing here..." />
                </InputContainer>
                <FilterContainer>
                   <p>Or filter</p>

@@ -54,23 +54,49 @@ const HeaderText = styled.h3`
 `;
 
 const Button = styled.button`
-   font-size: 16px;
-   background: rgba(0, 0, 0, 0);
-   color: white;
-   border: 2px solid white;
-   width: 140px;
-   height: 40px;
-   border-radius: 3px;
-   display: block;
-   margin: 0 auto;
-   margin-top: 40px;
-   transition: transform 0.2s ease-in-out;
-   cursor: pointer;
-   &:hover{
-      background-color: rgba(0, 0, 0, .4);
-      transform: scale(1.1);
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, .4);
-   }`;
+ font-family: inherit;
+ display: block;
+ width: 8em;
+ height: 2.6em;
+ line-height: 2.5em;
+ margin: 0 auto;
+ position: relative;
+ overflow: hidden;
+ border: 2px solid #4f2d04;
+ transition: color .5s;
+ z-index: 1;
+ font-size: 17px;
+ border-radius: 6px;
+ font-weight: 500;
+ color: #4f2d04;
+ transition: all .5s;
+ background-color: rgba(254, 242, 219, .6);
+ cursor: pointer;
+
+   &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: #4f2d04;
+      height: 150px;
+      width: 200px;
+      border-radius: 50%;
+}
+   &:hover {
+      color: #fff;
+      transform: scale(1.1)
+   }
+   &:before {
+      top: 100%;
+      left: 100%;
+      transition: all .7s;
+   }
+ &:hover:before{
+   top: -30px;
+   left: -30px;
+}
+
+`
 
 const AppBanner = () => {
    const { myRef } = useContext(sectionContext);
@@ -86,7 +112,7 @@ const AppBanner = () => {
                <HeaderNavlist>
                   <Link to="/our-coffee"> <span>Our coffee</span></Link>
                </HeaderNavlist>
-               <HeaderNavlist><span>For your pleasure</span></HeaderNavlist>
+               <HeaderNavlist><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></HeaderNavlist>
             </ul>
          </HeaderNav>
          <HeaderTitleText>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import coffeeGirl from "../../resourses/images/Coffee/CoffeGirl.jpg";
 import beanImage from "../../resourses/images/Beens/Beens.png";
 
 const Section = styled.section`
@@ -12,6 +11,7 @@ const Wrapper = styled.div`
    width: 700px;
    display: flex;
    justify-content: space-between;
+   flex-wrap: wrap;
 `;
 const ImageContainer = styled.div`
    width: 280px;
@@ -43,27 +43,32 @@ const ArticleContainerImage = styled.div`
 const ArticleContainerText = styled.article`
    font-size: 100%
 `;
+const HorizontalLine = styled.div`
 
-const AppBeensInfo = () => {
+   margin: 20px auto;
+   height: 2px;
+   width: 240px;
+   background-color: black;
+`
+
+const AppProductsInfo = ({title, description, image, alt }) => {
    return (
       <Section>
          <Wrapper>
             <ImageContainer>
-               <img src={coffeeGirl} alt="coffeeGirl" />
+               <img src={image} alt={alt} />
             </ImageContainer>
             <ArticleContainer>
-               <ArticleContainerTitle>About our beans</ArticleContainerTitle>
-               <ArticleContainerImage><img src={beanImage} alt="beanImage" /></ArticleContainerImage>
-               <ArticleContainerText>Extremity sweetness difficult behaviour he of. On disposal of as landlord horrible.<br /><br />
-                  Afraid at highly months do things on at. Situation recommend objection do intention
-                  so questions.
-                  <br />As greatly removed calling pleased improve an. Last ask him cold feel
-                  met spot shy want. Children me laughing we prospect answered followed. At it went
-                  is song that held help face.</ArticleContainerText>
+               <ArticleContainerTitle>{title}</ArticleContainerTitle>
+               <ArticleContainerImage><img src={beanImage} alt="beans" /></ArticleContainerImage>
+               <ArticleContainerText>{description}</ArticleContainerText>
             </ArticleContainer>
+            <HorizontalLine />
          </Wrapper>
+         
       </Section>
+      
    )
 }
 
-export default AppBeensInfo;
+export default AppProductsInfo;

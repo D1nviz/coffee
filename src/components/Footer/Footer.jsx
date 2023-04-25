@@ -41,7 +41,7 @@ const Footer = () => {
                <NavList>
                   <NavListItem> <Link to="/"><span>Coffe house</span></Link></NavListItem>
                   <NavListItem><Link to="/our-coffee"> <span>Our coffee</span></Link></NavListItem>
-                  <NavListItem>For your pleasure</NavListItem>
+                  <NavListItem><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></NavListItem>
                </NavList>
             </NavBar>
             <BeensFolder>

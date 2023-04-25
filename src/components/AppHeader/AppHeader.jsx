@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import background from "../../resourses/images/backgrounds/Header.png";
 import pngBeens from "../../resourses/images/Beens/PngBeens.png";
 import { Link, NavLink } from "react-router-dom";
 
@@ -7,7 +6,7 @@ const Header = styled.div`
    color: white;
    width: 100%;
    height: 30vh;
-   background: no-repeat url(${background});
+   background: ${({ background }) => background ? `no-repeat url(${background})` : 'none'};
    background-size: cover;
 
 `;
@@ -43,20 +42,21 @@ const HeaderTitle = styled.h1`
    margin-top: 2%;
    font-weight:400;
 `
-const AppHeader = () => {
+
+const AppHeader = ({background, text}) => {
 
    return (
-      <Header>
+      <Header background={background}>
          <HeaderNav>
             <ul>
                <HeaderNavlist><Link to="/"><span>Coffe house</span></Link></HeaderNavlist>
                <HeaderNavlist><Link to="/our-coffee"><span>Our coffee</span></Link></HeaderNavlist>
-               <HeaderNavlist>For your pleasure</HeaderNavlist>
+               <HeaderNavlist><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></HeaderNavlist>
             </ul>
 
          </HeaderNav >
          
-         <HeaderTitle>OurCoffee</HeaderTitle>
+         <HeaderTitle>{text}</HeaderTitle>
       </Header >
    )
 }
