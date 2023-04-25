@@ -1,8 +1,11 @@
 import styled from "styled-components";
+import { sectionAboutContext, sectionContext } from "../Context";
 import background from "../../resourses/images/backgrounds/MramorBg.jpg"
 import solimoCoffee from "../../resourses/images/Coffee/SolimoCoffee.png";
 import prestoCoffee from "../../resourses/images/Coffee/PrestoCoffee.png";
 import aromisticoCoffee from "../../resourses/images/Coffee/AromisticoCoffee.png";
+import { ref } from "yup";
+import { useContext } from "react";
 
 const Section = styled.section`
    display: flex;
@@ -16,11 +19,10 @@ const Wrapper = styled.div`
    max-width: 800px;
    margin-top: 80px;
    margin-bottom: 100px;
-`;
-
-const TextTitle = styled.h2`
-   text-align: center;
-   font-size: 24px;
+   h3 {
+      text-align: center;
+      font-size: 24px;
+   }
 `;
 const CardFolder = styled.div`
    width: 800px;
@@ -37,10 +39,10 @@ const ItemCard = styled.div`
    align-items: center;
    font-size: 14px;
    border-radius: 8px;
-   transition: all .2s ease-in-out;
+   transition: all .3s ease-in-out;
    cursor: pointer;
    &:hover{
-      filter: brightness(90%);
+      box-shadow: 0px 0px 15px 1px #7e3f089d;
       transform: scale(1.1);
    }
 `;
@@ -57,11 +59,11 @@ const ItemCardPrice = styled.div`
 `;
 
 const AppBest = () => {
+   const {appBestRef} = useContext(sectionAboutContext);
    return (
-      <>
-         <Section>
+         <Section ref={appBestRef}>
             <Wrapper>
-               <TextTitle>Our best</TextTitle>
+               <h3>Our best</h3>
                <CardFolder>
                   <ItemCard>
                      <ItemCardEntry><img src={solimoCoffee} alt="" /></ItemCardEntry>
@@ -87,7 +89,6 @@ const AppBest = () => {
                </CardFolder>
             </Wrapper>
          </Section>
-      </>
    )
 }
 

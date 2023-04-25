@@ -8,55 +8,55 @@ const Header = styled.div`
    height: 30vh;
    background: ${({ background }) => background ? `no-repeat url(${background})` : 'none'};
    background-size: cover;
+   nav {
+      position: relative;
+      padding-top: 30px;
+      color: white;
+      margin-left: 120px;
+      &:before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url(${pngBeens});
+      background-size: cover;
+      left: -5px;
+      bottom: -4px;
+      }
+      li {
+         font-size: 16px;
+         display: inline-block;
+         margin-right: 40px;
+         transition: transform 0.2s ease-in-out;
+         cursor: pointer;
+         &:hover{
+         transform: scale(1.1);
+         }
+      }
+   }
+   h2 {
+         font-size: 200%;
+         text-align: center;
+         margin-top: 2%;
+         font-weight:400;
+      }
 
 `;
-const HeaderNav = styled.nav`
-   position: relative;
-   padding-top: 30px;
-   color: white;
-   margin-left: 120px;
-   &:before {
-   content: "";
-   position: absolute;
-   width: 50px;
-   height: 50px;
-   background-image: url(${pngBeens});
-   background-size: cover;
-   left: -5px;
-   bottom: -4px;
-   }
-`;
-const HeaderNavlist = styled.li`
-   font-size: 16px;
-   display: inline-block;
-   margin-right: 40px;
-   transition: transform 0.2s ease-in-out;
-   cursor: pointer;
-   &:hover{
-      transform: scale(1.1);
-   }
-`;
-const HeaderTitle = styled.h1`
-   font-size: 200%;
-   text-align: center;
-   margin-top: 2%;
-   font-weight:400;
-`
+
+
 
 const AppHeader = ({background, text}) => {
 
    return (
       <Header background={background}>
-         <HeaderNav>
+         <nav>
             <ul>
-               <HeaderNavlist><Link to="/"><span>Coffe house</span></Link></HeaderNavlist>
-               <HeaderNavlist><Link to="/our-coffee"><span>Our coffee</span></Link></HeaderNavlist>
-               <HeaderNavlist><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></HeaderNavlist>
+               <li><Link to="/"><span>Coffe house</span></Link></li>
+               <li><Link to="/our-coffee"><span>Our coffee</span></Link></li>
+               <li><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></li>
             </ul>
-
-         </HeaderNav >
-         
-         <HeaderTitle>{text}</HeaderTitle>
+         </nav >
+         <h2>{text}</h2>
       </Header >
    )
 }
