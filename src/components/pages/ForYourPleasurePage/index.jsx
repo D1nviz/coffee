@@ -1,6 +1,7 @@
-import AppHeader from "../../AppHeader/AppHeader";
-import AppProductsInfo from "../../AppProductsInfo/AppProductsInfo";
-import CoffeeList from "../../CoffeeList/CoffeeList";
+import AppHeader from "../../AppHeader/";
+import AppProductsInfo from "../../AppProductsInfo/";
+import CoffeeList from "../../CoffeeList/";
+
 import background from "../../../resourses/images/backgrounds/forYourPleasureBg.png";
 import cupOfCoffee from "../../../resourses/images/Coffee/ourPleasureImg.png"
 

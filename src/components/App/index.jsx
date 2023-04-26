@@ -1,9 +1,10 @@
-import MainPage from "../pages/MainPage/MainPage";
-import Footer from "../Footer/Footer";
-import OurCoffePage from "../pages/OurCoffeePage/OurCoffeePage";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import ForYourPleasurePage from "../pages/ForYourPleasurePage/ForYourPleasure";
 import {lazy, Suspense} from "react";
+import MainPage from "../pages/MainPage/";
+import AppFooter from "../AppFooter/";
+import OurCoffePage from "../pages/OurCoffeePage/";
+import ForYourPleasurePage from "../pages/ForYourPleasurePage/";
+
  
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/our-coffee" element={<OurCoffePage/>}/>
           <Route path="/for-your-pleasure" element={<ForYourPleasurePage/>}/>
         </Routes>
-      <Footer/>
+      <AppFooter/>
     </Router>
   );
 }

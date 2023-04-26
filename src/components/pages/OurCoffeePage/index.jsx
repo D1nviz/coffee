@@ -1,7 +1,8 @@
-import AppHeader from "../../AppHeader/AppHeader";
-import AppProductsInfo from "../../AppProductsInfo/AppProductsInfo";
-import AppSearch from "../../AppSearch/AppSearch";
-import CoffeeList from "../../CoffeeList/CoffeeList";
+import AppHeader from "../../AppHeader/";
+import AppProductsInfo from "../../AppProductsInfo/";
+import AppSearch from "../../AppSearch/";
+import CoffeeList from "../../CoffeeList/";
+
 import background from "../../../resourses/images/backgrounds/ourCoffee.png";
 import coffeeGirl from "../../../resourses/images/Coffee/CoffeGirl.jpg";
 

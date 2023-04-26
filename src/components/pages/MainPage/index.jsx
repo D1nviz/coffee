@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import AppBanner from "../../AppBanner/AppBanner";
-import AppInfo from "../../AppInfo/AppInfo";
-import AppBest from "../../AppBest/AppBest";
 import { sectionContext, sectionAboutContext } from "../../Context";
+import AppBanner from "../../AppBanner/";
+import AppInfo from "../../AppInfo/";
+import AppBestProducts from "../../AppBestProducts/";
 
 const MainPage = () => {
    const myRef = useRef();
@@ -14,7 +14,7 @@ const MainPage = () => {
                <AppBanner />
                <main>
                   <AppInfo />
-                  <AppBest />
+                  <AppBestProducts />
                </main>
             </sectionAboutContext.Provider>
          </sectionContext.Provider>
