@@ -21,18 +21,17 @@ const AppBanner = () => {
    const executeScroll = () => myRef.current.scrollIntoView();
 
    return (
-      
       <BannerHead>
          <NavPanel>
             <NavList>
                <NavListItem>
-                  <Link to="/"><span>Coffe house</span></Link>
+                  <NavLink to="/"> <span>Coffee house</span></NavLink>
                </NavListItem>
                <NavListItem>
-                  <Link to="/our-coffee"> <span>Our coffee</span></Link>
+                  <NavLink to="/our-coffee"> <span>Our coffee</span></NavLink>
                </NavListItem>
                <NavListItem>
-                  <Link to="/for-your-pleasure"> <span>For your pleasure</span></Link>
+                  <NavLink to="/for-your-pleasure"> <span>For your pleasure</span></NavLink>
                   </NavListItem>
             </NavList>
          </NavPanel>

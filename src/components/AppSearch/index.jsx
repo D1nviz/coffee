@@ -12,7 +12,6 @@ import {
 
 const AppSearch = () => {
    return (
-      <>
          <FilterSearchWrapper>
             <FilterSearchContainer>
                <SearhContainer>
@@ -29,8 +28,6 @@ const AppSearch = () => {
                </FilterContainer>
             </FilterSearchContainer>
          </FilterSearchWrapper>
-
-      </>
    )
 }
 

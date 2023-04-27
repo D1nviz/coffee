@@ -7,12 +7,12 @@ const CoffeeList = () => {
    return (
       <SectionCoffeeList>
          <CoffeeListGrid>
-            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", width: "220px", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
+            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
          </CoffeeListGrid>
       </SectionCoffeeList>
    )

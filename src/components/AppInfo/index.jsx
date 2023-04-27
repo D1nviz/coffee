@@ -30,7 +30,7 @@ const AppInfo = () => {
                Eagerness furniture set preserved far recommend. Did even but nor are most gave hope.
                Secure active living depend son repair day ladies now.
             </InfoText>
-            <BannerButton onClick={executeScroll}>More</BannerButton>
+            <BannerButton onClick={executeScroll}>Try best</BannerButton>
          </WrapperInfo>
       </SectionInfo>
    )

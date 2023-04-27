@@ -9,7 +9,7 @@ import {
    CardItemThumbnail,
    CardItemPrice,
    CardItemTitle
-} from "../styles/"
+} from "../styles/";
 
 import solimoCoffee from "../../resourses/images/Coffee/SolimoCoffee.png";
 import prestoCoffee from "../../resourses/images/Coffee/PrestoCoffee.png";

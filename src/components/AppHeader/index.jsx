@@ -8,14 +8,13 @@ import {
 } from "../styles";
 
 const AppHeader = ({background, text}) => {
-
    return (
       <Header background={background}>
          <NavPanel>
             <NavList>
-               <NavListItem><Link to="/"><span>Coffe house</span></Link></NavListItem>
-               <NavListItem><Link to="/our-coffee"><span>Our coffee</span></Link></NavListItem>
-               <NavListItem><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></NavListItem>
+               <NavListItem><NavLink to="/"><span>Coffee house</span></NavLink></NavListItem>
+               <NavListItem><NavLink to="/our-coffee"><span>Our coffee</span></NavLink></NavListItem>
+               <NavListItem><NavLink to="/for-your-pleasure"> <span>For your pleasure</span></NavLink></NavListItem>
             </NavList>
          </NavPanel >
          <HeaderTitle>{text}</HeaderTitle>

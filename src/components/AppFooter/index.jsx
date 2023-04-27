@@ -13,9 +13,9 @@ const AppFooter = () => {
       <Footer>
          <FooterWrapper>
             <FooterNav>
-               <FooterNavItem><Link to="/"><span>Coffe house</span></Link></FooterNavItem>
-               <FooterNavItem><Link to="/our-coffee"> <span>Our coffee</span></Link></FooterNavItem>
-               <FooterNavItem><Link to="/for-your-pleasure"> <span>For your pleasure</span></Link></FooterNavItem>
+               <FooterNavItem><NavLink to="/"><span>Coffee house</span></NavLink></FooterNavItem>
+               <FooterNavItem><NavLink to="/our-coffee"> Our coffee</NavLink></FooterNavItem>
+               <FooterNavItem><NavLink  to="/for-your-pleasure"> <span>For your pleasure</span></NavLink></FooterNavItem>
             </FooterNav>
             <FooterImgFolder>
                <img src={Beans} alt="Beans"/>

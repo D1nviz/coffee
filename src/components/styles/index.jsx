@@ -34,14 +34,22 @@ export const NavList = styled.ul ``;
 export const NavListItem = styled.li`
    font-size: 16px;
    display: inline-block;
-   margin-right: 40px;
-   transition: transform 0.2s ease-in-out;
+   margin-right: 25px;
+   padding: 2px 4px;
+   transition: all 0.2s ease-in-out;
+   border-radius: 10px;
    cursor: pointer;
       &:hover{
-         transform: scale(1.1);
+      background-color: #f0f0f044;
       }
+      & .active {
+      border-radius: 10px;
+      padding: 2px 4px;
+      background-color: #f0f0f044;
+   }
 `;
 export const BannerContainer = styled.div`
+   margin-top: 5vh;
    display: flex;
    justify-content: space-around;
    align-items: center;
@@ -50,8 +58,10 @@ export const BannerContainer = styled.div`
 export const BannerTitle = styled.h1`
    font-size: 40px;
    margin-top: 110px;
+   text-shadow: 0px 0px 3px black;
 `;
 export const BannerText = styled.h3`
+   text-shadow: 0px 0px 2px black;
    margin-top: 0;
    margin-bottom: 20px;
    font-size: 24px;
@@ -82,10 +92,13 @@ export const BannerButton = styled.button`
          content: "";
          position: absolute;
          z-index: -1;
-         background: #4f2d04;
+         background: rgb(131, 90, 41);
          height: 150px;
          width: 200px;
          border-radius: 50%;
+         top: 100%;
+         left: 100%;
+         transition: all .5s;
    }
       &:hover {
          color: #fff;
@@ -94,14 +107,15 @@ export const BannerButton = styled.button`
          -moz-box-shadow: 0px 0px 36px 0px rgba(138,84,14,0.6);
          box-shadow: 0px 0px 36px 0px rgba(138,84,14,0.6);
       }
-      &:before {
-         top: 100%;
-         left: 100%;
-         transition: all .5s;
-      }
-      &:hover:before{
+      &:hover:before {
          top: -30px;
          left: -30px;
+      }
+      &:active {
+         transform: scale(1);
+         -webkit-box-shadow: 0px 0px 10px 0px rgba(138,84,14,0.6);
+         -moz-box-shadow: 0px 0px 10px 0px rgba(138,84,14,0.6);
+         box-shadow: 0px 0px 10px 0px rgba(138,84,14,0.6);
       }
    
 `;
@@ -153,7 +167,7 @@ export const BestCardItem = styled.div`
    transition: all .3s ease-in-out;
    cursor: pointer;
    &:hover{
-         box-shadow: 0px 0px 15px 1px #7e3f089d;
+         box-shadow: rgb(110 64 4 / 60%) 0px 0px 8px 1px;
          transform: scale(1.1);
       }
 `;
@@ -189,13 +203,24 @@ export const FooterNav = styled.nav`
    justify-content: space-between;
 `;
 export const FooterImgFolder = styled.div`
-   margin: 10px 10px 0 0;
+   margin: 10px 30px 0 0;
 `;
 export const FooterNavItem = styled(NavListItem)`
    margin: 0 10px;
-      &:hover {
-         text-shadow: .5px .5px 2px rgba(0, 0, 0, .6);
+   transition: all .2s ease-in-out;
+   &:hover{
+      background-color: #f0f0f0ac;
+      border-radius: 10px;
+      box-shadow: 0px 0px 3px 3px #f0f0f0;
+   }
+   & .active {
+      background-color: #f0f0f0ac;
+      border-radius: 10px;
+      -moz-border-radius:10px;
+      -webkit-border-radius: 10px;
+      border: 3px solid #f0f0f0ac;
       }
+      
 `;
 export const Header = styled.div`
    color: white;
@@ -206,9 +231,10 @@ export const Header = styled.div`
 `;
 export const HeaderTitle = styled.h2`
    font-size: 200%;
+   font-weight: 700;
    text-align: center;
    margin-top: 2%;
-   font-weight:400;
+   text-shadow: 0px 0px 3px black;
 `;
 export const SectionAboutProduct = styled.section`
    margin-top: 8vh;
@@ -315,7 +341,7 @@ export const FiltersText = styled.p`
 `;
 export const SectionCoffeeList = styled(SectionAboutProduct)``;
 export const CoffeeListGrid = styled.div`
-   width: 840px;
+   width: 800px;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 60px;
