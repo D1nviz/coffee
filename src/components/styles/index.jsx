@@ -38,8 +38,8 @@ export const NavListItem = styled.li`
    border-radius: 10px;
    cursor: pointer;
       a {
-         transition: all 0.2s ease-in-out;
-         padding: 2px 4px;
+         transition: all .3s ease-in-out;
+         padding: 3px 8px;
          border-radius: 10px;
          &:hover{
          background-color: #f0f0f044;
@@ -171,7 +171,7 @@ export const BestCardItem = styled.div`
    cursor: pointer;
    &:hover{
          box-shadow: rgb(110 64 4 / 60%) 0px 0px 8px 1px;
-         transform: scale(1.1);
+         transform: scale(1.05);
       }
 `;
 export const CardItemThumbnail = styled.img`
@@ -201,6 +201,7 @@ export const FooterWrapper = styled.div`
 `;
 
 export const FooterNav = styled.nav`
+   width: 400px;
    font-size: 16px;
    display: flex;
    justify-content: space-between;
@@ -208,22 +209,20 @@ export const FooterNav = styled.nav`
 export const FooterImgFolder = styled.div`
    margin: 10px 30px 0 0;
 `;
-export const FooterNavItem = styled(NavListItem)`
-   margin: 0 10px;
-   transition: all .2s ease-in-out;
-   &:hover{
-      background-color: #f0f0f0ac;
-      border-radius: 10px;
-      box-shadow: 0px 0px 3px 3px #f0f0f0;
-   }
-   & .active {
-      background-color: #f0f0f0ac;
-      border-radius: 10px;
-      -moz-border-radius:10px;
-      -webkit-border-radius: 10px;
-      border: 3px solid #f0f0f0ac;
+export const FooterNavItem = styled.li`
+   border-radius: 10px;
+   cursor: pointer;
+      a {
+         transition: all .3s ease-in-out;
+         padding: 4px 6px;
+         border-radius: 10px;
+         &:hover{
+         background-color: #9d9b9b4b;
       }
-      
+      }
+      & .active {
+         background-color: #9d9b9b4b;
+      }
 `;
 export const Header = styled.div`
    color: white;
@@ -299,7 +298,7 @@ export const SearhContainer = styled.div`
    display: flex;
    justify-content: space-between;
    align-items: center;
-   width: 300px;
+   width: 325px;
 `;
 export const SearchLabel = styled.label`
    font-size: 1.1em;
@@ -338,6 +337,9 @@ export const FilterButtons = styled(BannerButton)`
    width: 75px;
    height: 30px;
    margin: 0 2.5px;
+   &:hover {
+      box-shadow: rgb(183 172 158 / 80%) 0px 0px 36px 0px;
+   }
 `;
 export const FiltersText = styled.p`
    font-size: 1.1em;
@@ -347,24 +349,36 @@ export const CoffeeListGrid = styled.div`
    width: 800px;
    display: grid;
    grid-template-columns: repeat(3, 1fr);
-   gap: 60px;
+   gap: 75px;
 `;
 export const ItemContainer = styled.div`
    display: flex;
-   margin: 0 auto;
-   -webkit-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
-   -moz-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
-   box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
-   
+   justify-content: center;
+   box-shadow: 5px 5px 10px #bebebe,
+             -10px -10px 20px #ffffff;
+   transition: all .3s ease-in-out;
+   cursor: pointer;
+   &:hover {
+      transform: scale(1.05);
+      box-shadow: 10px 10px 20px #bebebe,
+             -10px -10px 20px #ffffff;
+   }
 `;
 export const ItemEntryWrapper = styled.div`
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: flex-end;
-`
+   
+`;
+export const ItemTextFolder = styled.div`
+   text-align: right;`
+
 export const ItemThumbnail = styled.div`
+   margin-top: 20px;
+
 `;
 export const ItemTitle = styled.h5`
+
 `;
-export const ItemCountry = styled.p``;
-export const ItemPrice = styled.p``;
+export const ItemCountry = styled.p`
+
+`;
+export const ItemPrice = styled.p`
+font-weight: 700`;
