@@ -30,23 +30,25 @@ export const NavPanel = styled.nav`
       bottom: -4px;
       }
 `;
-export const NavList = styled.ul ``;
+export const NavList = styled.ul``;
 export const NavListItem = styled.li`
    font-size: 16px;
    display: inline-block;
-   margin-right: 25px;
-   padding: 2px 4px;
-   transition: all 0.2s ease-in-out;
+   margin-right: 27.5px;
    border-radius: 10px;
    cursor: pointer;
-      &:hover{
-      background-color: #f0f0f044;
+      a {
+         transition: all 0.2s ease-in-out;
+         padding: 2px 4px;
+         border-radius: 10px;
+         &:hover{
+         background-color: #f0f0f044;
+      }
       }
       & .active {
-      border-radius: 10px;
-      padding: 2px 4px;
-      background-color: #f0f0f044;
-   }
+         background-color: #f0f0f044;
+         
+      }
 `;
 export const BannerContainer = styled.div`
    margin-top: 5vh;
@@ -133,6 +135,7 @@ export const WrapperInfo = styled(AppWrapper)`
 export const InfoTitle = styled.h3`
    text-align: center;
    font-size: 24px;
+   margin: 0 0 10px  0;
 `;
 export const InfoText = styled.p`
    text-align: center;
@@ -188,7 +191,7 @@ export const Footer = styled.footer`
    justify-content: center;
    width: 100%;
 `;
-export const FooterWrapper = styled.div `
+export const FooterWrapper = styled.div`
    margin-top: 30px;
    margin-bottom: 30px;
    width: 440px;
@@ -346,3 +349,22 @@ export const CoffeeListGrid = styled.div`
    grid-template-columns: repeat(3, 1fr);
    gap: 60px;
 `;
+export const ItemContainer = styled.div`
+   display: flex;
+   margin: 0 auto;
+   -webkit-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
+   -moz-box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
+   box-shadow: 10px 10px 30px -15px rgba(0,0,0,0.75);
+   
+`;
+export const ItemEntryWrapper = styled.div`
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: flex-end;
+`
+export const ItemThumbnail = styled.div`
+`;
+export const ItemTitle = styled.h5`
+`;
+export const ItemCountry = styled.p``;
+export const ItemPrice = styled.p``;

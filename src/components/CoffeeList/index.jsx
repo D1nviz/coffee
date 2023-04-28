@@ -1,18 +1,40 @@
-import { 
+import {
    SectionCoffeeList,
-   CoffeeListGrid
- } from "../styles";
+   CoffeeListGrid,
+   ItemContainer,
+   ItemTitle,
+   ItemCountry,
+   ItemPrice,
+   ItemThumbnail,
+   ItemEntryWrapper
+} from "../styles";
+import aromisticoCoffee from "../../resourses/images/Coffee/AromisticoCoffee.png";
+const items = [
+   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
+   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
+   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
+   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
+   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
+   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee }
+]
+const renderItems = items.map(({ title, country, price, img }) => (
+   <ItemContainer>
+      <ItemEntryWrapper>
+         <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
+         <ItemTitle>{title}</ItemTitle>
+         <ItemCountry>{country}</ItemCountry>
+         <ItemPrice>{price}</ItemPrice>
+      </ItemEntryWrapper>
+   </ItemContainer>
+));
 
 const CoffeeList = () => {
    return (
       <SectionCoffeeList>
          <CoffeeListGrid>
-            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
-            <div style={{backgroundColor: "#d7a977", height: "260px"}}></div>
+            {
+               renderItems
+            }
          </CoffeeListGrid>
       </SectionCoffeeList>
    )

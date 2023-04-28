@@ -8,18 +8,16 @@ const MainPage = () => {
    const myRef = useRef();
    const appBestRef = useRef();
    return (
-      <>
-         <sectionContext.Provider value={{ myRef }}>
-            <sectionAboutContext.Provider value={{appBestRef}}>
-               <AppBanner />
-               <main>
-                  <AppInfo />
-                  <AppBestProducts />
-               </main>
-            </sectionAboutContext.Provider>
-         </sectionContext.Provider>
-      </>
-      
+      <sectionContext.Provider value={{ myRef }}>
+         <sectionAboutContext.Provider value={{ appBestRef }}>
+            <AppBanner />
+            <main>
+               <AppInfo />
+               <AppBestProducts />
+            </main>
+         </sectionAboutContext.Provider>
+      </sectionContext.Provider>
+
    )
 }
 
