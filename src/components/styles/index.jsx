@@ -239,7 +239,7 @@ export const HeaderTitle = styled.h2`
    text-shadow: 0px 0px 3px black;
 `;
 export const SectionAboutProduct = styled.section`
-   margin-top: 8vh;
+   margin: 8vh 0;
    display: flex;
    justify-content: center;
    width: 100%;
@@ -330,7 +330,7 @@ export const FilterContainer = styled.div`
 export const FilterButtonsContainer = styled.div`
    display: flex;
 `;
-export const FilterButtons = styled(BannerButton)`
+export const FilterButton = styled(BannerButton)`
    background: white;
    color: black;
    font-size: 12px;

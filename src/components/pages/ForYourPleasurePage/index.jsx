@@ -1,6 +1,8 @@
+import { useState } from "react";
 import AppHeader from "../../AppHeader/";
 import AppProductsInfo from "../../AppProductsInfo/";
 import CoffeeList from "../../CoffeeList/";
+import { searchContext } from "../../Context";
 
 import background from "../../../resourses/images/backgrounds/forYourPleasureBg.png";
 import cupOfCoffee from "../../../resourses/images/Coffee/ourPleasureImg.png"
@@ -13,8 +15,9 @@ met spot shy want. Children me laughing we prospect answered followed. At it wen
 is song that held help face.`;
 
 const ForYourPleasurePage = () => {
+   const [searchQuery, setSearchQuery] = useState("");
    return (
-      <>
+      <searchContext.Provider value={{searchQuery, setSearchQuery}}>
          <AppHeader 
             text={"For your pleasure"} 
             background={background}
@@ -28,7 +31,7 @@ const ForYourPleasurePage = () => {
             />
             <CoffeeList/>
          </main>
-      </>
+      </searchContext.Provider>
    )
 }
 

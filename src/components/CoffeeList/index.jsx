@@ -1,3 +1,6 @@
+import { useState, useContext } from "react";
+import { postItems } from "../Constants";
+import { filterContext, searchContext } from "../Context";
 import {
    SectionCoffeeList,
    CoffeeListGrid,
@@ -9,33 +12,42 @@ import {
    ItemEntryWrapper,
    ItemTextFolder
 } from "../styles";
-import aromisticoCoffee from "../../resourses/images/Coffee/AromisticoCoffee.png";
-const items = [
-   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
-   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
-   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
-   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
-   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee },
-   { title: "AROMISTICO Coffee 1 kg", country: "Brazil", price: "10.99$", img: aromisticoCoffee }
-]
-const renderItems = items.map(({ title, country, price, img }) => (
-   <ItemContainer>
-      <ItemEntryWrapper>
-      <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
-         <ItemTextFolder>
-            <ItemTitle>{title}</ItemTitle>
-            <ItemCountry>{country}</ItemCountry>
-            <ItemPrice>{price}</ItemPrice>
-         </ItemTextFolder>
-      </ItemEntryWrapper>
-   </ItemContainer>
-));
+
+const filterItems = (items, filter) => {
+   if(filter === "all") {
+      return items;
+   } 
+   return items.filter(item => item.country === filter);
+}
+const onSearch = (searchQuery, postItems) => {
+   return postItems.filter(item => {
+      return item.title.toLowerCase().startsWith(searchQuery.toLowerCase())
+   })
+}
+
 
 const CoffeeList = () => {
+   const { searchQuery } = useContext(searchContext);
+   const { filter } = useContext(filterContext);
+
    return (
       <SectionCoffeeList>
          <CoffeeListGrid>
-            {renderItems}
+            {filterItems(onSearch(searchQuery, postItems), filter)
+               .map(({ id, title, country, price, img }) => {
+               return (
+                  <ItemContainer key={id}>
+                     <ItemEntryWrapper>
+                        <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
+                        <ItemTextFolder>
+                           <ItemTitle>{title}</ItemTitle>
+                           <ItemCountry>{country}</ItemCountry>
+                           <ItemPrice>{price}</ItemPrice>
+                        </ItemTextFolder>
+                     </ItemEntryWrapper>
+                  </ItemContainer>
+               )
+            })}
          </CoffeeListGrid>
       </SectionCoffeeList>
    )
