@@ -239,43 +239,61 @@ export const HeaderTitle = styled.h2`
    text-shadow: 0px 0px 3px black;
 `;
 export const SectionAboutProduct = styled.section`
-   margin: 8vh 0;
+   margin: 5vh auto;
    display: flex;
    justify-content: center;
    width: 100%;
 `;
-export const AboutProductWrapper = styled(AppWrapper)`
+export const AboutProductWrapper = styled.div`
+   width: 800px;
    display: flex;
-   justify-content: space-around;
+   align-items: center;
+   justify-content: space-between;
    flex-wrap: wrap;
 `
 export const AboutProductImg = styled.div`
-   width: 280px;
-   height: 355px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 400px;
+   height: 400px;
    img {
-      -webkit-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.26);
-      -moz-box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.26);
-      box-shadow: 10px 10px 26px 0px rgba(0,0,0,0.26);
-
+      box-shadow: 5px 5px 20px rgba(0,0,0,0.26);
    }
 `;
 
 export const ArticleContainer = styled.article`
-   text-align: center;
-   height: 100%;
-   width: 50%;
+   width: 40%;
 `;
 export const ArticleTitle = styled.h4`
-   font-size: 140%; 
-   margin: 0;
+   text-align: center;
+   font-size: 140%;
+   margin-bottom: 0px;
 `;
 export const ArticleImgContainer = styled.div`
    width: 100%;
    display: flex;
    justify-content: center;
 `;
-export const ArticleText = styled.p`
+export const ArticleInfo = styled.div`
    font-size: 1em;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+`;
+export const ArticleDescription = styled.p`
+   text-align: center;
+`;
+export const ArticleParagraph = styled.p`
+`;
+export const ArticleParagraphName = styled.span`
+   font-weight: bold;
+   font-size: 1.1em;
+   margin-right: 10px;
+`;
+
+export const ArticlePrice = styled.span`
+   font-size: 24px;
 `;
 export const HorizontalLine = styled.div`
    margin: 20px auto;

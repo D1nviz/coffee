@@ -6,11 +6,31 @@ import {
    AboutProductImg,
    ArticleImgContainer,
    ArticleTitle,
-   ArticleText,
+   ArticleDescription,
+   ArticleParagraph,
+   ArticleParagraphName,
+   ArticleInfo,
+   ArticlePrice,
    HorizontalLine
 } from "../styles";
 
-const AppProductsInfo = ({title, description, image, alt }) => {
+const aboutProductRender = (country, description, price) => {
+   return (
+      <>
+         <ArticleParagraph>
+            <ArticleParagraphName>Country:</ArticleParagraphName>
+            <span>{country}</span>
+         </ArticleParagraph >
+         <ArticleParagraph>
+            <ArticleParagraphName>Description:</ArticleParagraphName> <span>{description}</span>
+         </ArticleParagraph>
+         <ArticleParagraph>
+            <ArticleParagraphName>Price:</ArticleParagraphName> <ArticlePrice>{price}</ArticlePrice>
+         </ArticleParagraph>
+      </>
+   )
+}
+const AppProductsInfo = ({ title, description, image, alt, country, price }) => {
    return (
       <SectionAboutProduct>
          <AboutProductWrapper>
@@ -20,9 +40,13 @@ const AppProductsInfo = ({title, description, image, alt }) => {
             <ArticleContainer>
                <ArticleTitle>{title}</ArticleTitle>
                <ArticleImgContainer><img src={beanImage} alt="beans" /></ArticleImgContainer>
-               <ArticleText>{description}</ArticleText>
+               <ArticleInfo>
+                  {
+                     (country && price && description) ? aboutProductRender(country, description, price)
+                        : <ArticleDescription>{description} </ArticleDescription>
+                  }
+               </ArticleInfo>
             </ArticleContainer>
-            <HorizontalLine />
          </AboutProductWrapper>
       </SectionAboutProduct>
    )

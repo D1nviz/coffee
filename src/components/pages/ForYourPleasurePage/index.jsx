@@ -7,8 +7,6 @@ import { forYourPleasureDescriotion } from "../../Constants";
 import background from "../../../resourses/images/backgrounds/forYourPleasureBg.png";
 import cupOfCoffee from "../../../resourses/images/Coffee/ourPleasureImg.png"
 
-
-
 const ForYourPleasurePage = () => {
    const [searchQuery, setSearchQuery] = useState("");
    const [filter, setFilter] = useState("all");

@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { postItems } from "../Constants";
 import { filterContext, searchContext } from "../Context";
 import {
@@ -38,14 +39,16 @@ const CoffeeList = () => {
                filteredPosts.map(({ id, title, country, price, img }) => {
                   return (
                      <ItemContainer key={id}>
-                        <ItemEntryWrapper>
-                           <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
-                           <ItemTextFolder>
-                              <ItemTitle>{title}</ItemTitle>
-                              <ItemCountry>{country}</ItemCountry>
-                              <ItemPrice>{price}</ItemPrice>
-                           </ItemTextFolder>
-                        </ItemEntryWrapper>
+                        <Link to={`/our-coffee/${id}`}>
+                           <ItemEntryWrapper>
+                              <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
+                              <ItemTextFolder>
+                                 <ItemTitle>{title}</ItemTitle>
+                                 <ItemCountry>{country}</ItemCountry>
+                                 <ItemPrice>{price}</ItemPrice>
+                              </ItemTextFolder>
+                           </ItemEntryWrapper>
+                        </Link>
                      </ItemContainer>
                   )
                })}
