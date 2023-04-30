@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { postItems } from "../Constants";
 import { filterContext, searchContext } from "../Context";
 import {
@@ -13,10 +13,10 @@ import {
    ItemTextFolder
 } from "../styles";
 
-const filterItems = (items, filter) => {
-   if(filter === "all") {
+const onFilter = (items, filter) => {
+   if (filter === "all") {
       return items;
-   } 
+   }
    return items.filter(item => item.country === filter);
 }
 const onSearch = (searchQuery, postItems) => {
@@ -29,25 +29,26 @@ const onSearch = (searchQuery, postItems) => {
 const CoffeeList = () => {
    const { searchQuery } = useContext(searchContext);
    const { filter } = useContext(filterContext);
-
+   const posts = onSearch(searchQuery, postItems);
+   const filteredPosts = onFilter(posts, filter);
    return (
       <SectionCoffeeList>
          <CoffeeListGrid>
-            {filterItems(onSearch(searchQuery, postItems), filter)
-               .map(({ id, title, country, price, img }) => {
-               return (
-                  <ItemContainer key={id}>
-                     <ItemEntryWrapper>
-                        <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
-                        <ItemTextFolder>
-                           <ItemTitle>{title}</ItemTitle>
-                           <ItemCountry>{country}</ItemCountry>
-                           <ItemPrice>{price}</ItemPrice>
-                        </ItemTextFolder>
-                     </ItemEntryWrapper>
-                  </ItemContainer>
-               )
-            })}
+            {
+               filteredPosts.map(({ id, title, country, price, img }) => {
+                  return (
+                     <ItemContainer key={id}>
+                        <ItemEntryWrapper>
+                           <ItemThumbnail><img src={img} alt="" /></ItemThumbnail>
+                           <ItemTextFolder>
+                              <ItemTitle>{title}</ItemTitle>
+                              <ItemCountry>{country}</ItemCountry>
+                              <ItemPrice>{price}</ItemPrice>
+                           </ItemTextFolder>
+                        </ItemEntryWrapper>
+                     </ItemContainer>
+                  )
+               })}
          </CoffeeListGrid>
       </SectionCoffeeList>
    )

@@ -340,6 +340,19 @@ export const FilterButton = styled(BannerButton)`
    &:hover {
       box-shadow: rgb(183 172 158 / 80%) 0px 0px 36px 0px;
    }
+   &.selected {
+      transition: all .5s ease-in-out; 
+      color: white;
+      transform: scale(1.1);
+         -webkit-box-shadow: 0px 0px 10px 0px rgba(138,84,14,0.6);
+         -moz-box-shadow: 0px 0px 10px 0px rgba(138,84,14,0.6);
+         box-shadow: 0px 0px 10px 0px rgba(138,84,14,0.6);
+      &::before {
+         top: -30px;
+         left: -30px;
+      }
+      
+   }
 `;
 export const FiltersText = styled.p`
    font-size: 1.1em;

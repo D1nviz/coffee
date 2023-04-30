@@ -14,17 +14,20 @@ import {
 } from "../styles/";
 import { filterProps } from "../Constants";
 
-import "../../style.css";
-
 const AppSearch = () => {
   const buttonRefs = useRef([]);
 
-  const onToggleFilter = (filter, setFilter, prevFilter, setPrevFilter) => {
-    if (prevFilter == filter) {
+  const onToggleFilter = (filter, setFilter, prevFilter, setPrevFilter, index) => {
+    if (prevFilter === filter) {
       setFilter("all");
+      setPrevFilter("all");
       return;
     }
-
+    buttonRefs.current.forEach((ref) => {
+      ref.classList.remove("selected");
+    }
+    );
+    buttonRefs.current[index].classList.add("selected");
     setPrevFilter(filter);
     setFilter(filter);
   };
@@ -37,13 +40,7 @@ const AppSearch = () => {
           key={key}
           ref={(ref) => (buttonRefs.current[index] = ref)}
           className={prevFilter === prop ? "selected" : ""}
-          onClick={() => {
-            onToggleFilter(prop, setFilter, prevFilter, setPrevFilter);
-            buttonRefs.current.forEach((ref) =>
-              ref.classList.remove("selected")
-            );
-            buttonRefs.current[index].classList.add("selected");
-          }}
+          onClick={() => onToggleFilter(prop, setFilter, prevFilter, setPrevFilter, index)}
         >
           {prop}
         </FilterButton>
@@ -51,7 +48,7 @@ const AppSearch = () => {
     });
 
   const { searchQuery, setSearchQuery } = useContext(searchContext);
-  const { filter, setFilter } = useContext(filterContext);
+  const { setFilter } = useContext(filterContext);
   const [prevFilter, setPrevFilter] = useState("");
 
   return (

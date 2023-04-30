@@ -15,7 +15,6 @@ import {
 
 import beansLogo from '../../resourses/images/Beens/Beans logo.svg';
 
-
 const AppBanner = () => {
    const { myRef } = useContext(sectionContext);
    const executeScroll = () => myRef.current.scrollIntoView();
