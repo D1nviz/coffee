@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect} from "react";
 import { searchContext, filterContext } from "../../Context";
 import AppHeader from "../../AppHeader/";
 import AppProductsInfo from "../../AppProductsInfo/";
@@ -8,11 +8,11 @@ import { ourCoffeDesripiton } from "../../Constants";
 import background from "../../../resourses/images/backgrounds/ourCoffee.png";
 import coffeeGirl from "../../../resourses/images/Coffee/CoffeGirl.jpg";
 
-
-
-
-
 const OurCoffePage = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+      return () => {}
+    }, []);
    const [searchQuery, setSearchQuery] = useState("");
    const [filter, setFilter] = useState("all");
    return (

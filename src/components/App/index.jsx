@@ -11,6 +11,7 @@ function App() {
     <Router basename="coffee">
           <Routes>
             <Route path="/" element={<MainPage />} />
+            <Route path="/:coffeId" element={<SingleCoffeePage/>}></Route>
             <Route path="/our-coffee" element={<OurCoffePage />} />
             <Route path="/our-coffee/:coffeId" element={<SingleCoffeePage/>}></Route>
             <Route path="/for-your-pleasure" element={<ForYourPleasurePage />} />

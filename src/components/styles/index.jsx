@@ -170,9 +170,10 @@ export const BestCardItem = styled.div`
    transition: all .3s ease-in-out;
    cursor: pointer;
    &:hover{
-         box-shadow: rgb(110 64 4 / 60%) 0px 0px 8px 1px;
-         transform: scale(1.05);
-      }
+      transform: scale(1.05);
+      background-color: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   }
 `;
 export const CardItemThumbnail = styled.img`
    margin-top: 20px;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import AppHeader from "../../AppHeader/";
 import AppProductsInfo from "../../AppProductsInfo/";
 import CoffeeList from "../../CoffeeList/";
@@ -8,9 +8,12 @@ import background from "../../../resourses/images/backgrounds/forYourPleasureBg.
 import cupOfCoffee from "../../../resourses/images/Coffee/ourPleasureImg.png"
 
 const ForYourPleasurePage = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+      return () => {}
+    }, []);
    const [searchQuery, setSearchQuery] = useState("");
    const [filter, setFilter] = useState("all");
-
    return (
       <>
          <AppHeader
