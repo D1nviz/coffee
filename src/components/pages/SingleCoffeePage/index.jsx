@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
+
+import { postItems } from "../../Constants";
 import AppHeader from "../../AppHeader";
 import AppProductsInfo from "../../AppProductsInfo";
 import coffee from "../../../resourses/images/Coffee/coffee.jpg"
 import background from "../../../resourses/images/backgrounds/ourCoffee.png";
-import { postItems } from "../../Constants";
-
 
 const SingleCoffeePage = () => {
    const { coffeId } = useParams();

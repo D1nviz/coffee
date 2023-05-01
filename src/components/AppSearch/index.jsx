@@ -1,6 +1,7 @@
+import { v4 as uuidv4 } from "uuid";
 import { useState, useContext, useRef } from "react";
 import { searchContext, filterContext } from "../Context";
-import { v4 as uuidv4 } from "uuid";
+import { filterProps } from "../Constants";
 import {
   FilterSearchWrapper,
   FilterSearchContainer,
@@ -12,7 +13,6 @@ import {
   FiltersText,
   FilterButton,
 } from "../styles/";
-import { filterProps } from "../Constants";
 
 const AppSearch = () => {
   const buttonRefs = useRef([]);

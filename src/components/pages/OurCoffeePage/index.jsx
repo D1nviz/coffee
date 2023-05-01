@@ -1,18 +1,18 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { searchContext, filterContext } from "../../Context";
+import { ourCoffeDesripiton } from "../../Constants";
 import AppHeader from "../../AppHeader/";
 import AppProductsInfo from "../../AppProductsInfo/";
 import AppSearch from "../../AppSearch/";
 import CoffeeList from "../../CoffeeList/";
-import { ourCoffeDesripiton } from "../../Constants";
 import background from "../../../resourses/images/backgrounds/ourCoffee.png";
 import coffeeGirl from "../../../resourses/images/Coffee/CoffeGirl.jpg";
 
 const OurCoffePage = () => {
    useEffect(() => {
       window.scrollTo(0, 0);
-      return () => {}
-    }, []);
+      return () => { }
+   }, []);
    const [searchQuery, setSearchQuery] = useState("");
    const [filter, setFilter] = useState("all");
    return (
@@ -29,14 +29,13 @@ const OurCoffePage = () => {
                alt={"Aesthetic coffee"}
             />
             <searchContext.Provider value={{ searchQuery, setSearchQuery }}>
-               <filterContext.Provider value={{filter, setFilter}}>
+               <filterContext.Provider value={{ filter, setFilter }}>
                   <AppSearch />
                   <CoffeeList />
                </filterContext.Provider>
             </searchContext.Provider>
          </main>
       </>
-
    )
 }
 

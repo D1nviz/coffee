@@ -14,7 +14,7 @@ import {
    HorizontalLine
 } from "../styles";
 
-const aboutProductRender = (country, description, price) => {
+const AboutProductRender = (country, description, price) => {
    return (
       <>
          <ArticleParagraph>
@@ -42,7 +42,7 @@ const AppProductsInfo = ({ title, description, image, alt, country, price }) => 
                <ArticleImgContainer><img src={beanImage} alt="beans" /></ArticleImgContainer>
                <ArticleInfo>
                   {
-                     (country && price && description) ? aboutProductRender(country, description, price)
+                     (country && price && description) ? AboutProductRender(country, description, price)
                         : <ArticleDescription>{description} </ArticleDescription>
                   }
                </ArticleInfo>

@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import { lazy, Suspense } from "react";
 import MainPage from "../pages/MainPage/";
 import AppFooter from "../AppFooter/";
 import OurCoffePage from "../pages/OurCoffeePage/";
@@ -14,8 +13,7 @@ function App() {
             <Route path="/:coffeId" element={<SingleCoffeePage/>}></Route>
             <Route path="/our-coffee" element={<OurCoffePage />} />
             <Route path="/our-coffee/:coffeId" element={<SingleCoffeePage/>}></Route>
-            <Route path="/for-your-pleasure" element={<ForYourPleasurePage />} />
-            
+            <Route path="/for-your-pleasure" element={<ForYourPleasurePage />} />  
           </Routes>
       <AppFooter/>
     </Router>

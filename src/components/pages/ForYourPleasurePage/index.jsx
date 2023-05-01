@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
+import { searchContext, filterContext } from "../../Context";
+import { forYourPleasureDescriotion } from "../../Constants";
 import AppHeader from "../../AppHeader/";
 import AppProductsInfo from "../../AppProductsInfo/";
 import CoffeeList from "../../CoffeeList/";
-import { searchContext, filterContext } from "../../Context";
-import { forYourPleasureDescriotion } from "../../Constants";
 import background from "../../../resourses/images/backgrounds/forYourPleasureBg.png";
 import cupOfCoffee from "../../../resourses/images/Coffee/ourPleasureImg.png"
 

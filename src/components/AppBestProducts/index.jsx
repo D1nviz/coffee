@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { sectionAboutContext } from "../Context";
 import { useContext } from "react";
+import { sectionAboutContext } from "../Context";
+import { postItems } from "../Constants";
 import {
    SectionBest,
    WrapperBest,
@@ -11,7 +12,6 @@ import {
    CardItemPrice,
    CardItemTitle
 } from "../styles/";
-import { postItems } from "../Constants";
 
 const bestPosts = postItems.slice(0, 3).map(({ title, price, img, id }) => {
    return (

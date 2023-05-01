@@ -4,26 +4,27 @@ import { sectionContext, sectionAboutContext } from "../../Context";
 import AppBanner from "../../AppBanner/";
 import AppInfo from "../../AppInfo/";
 import AppBestProducts from "../../AppBestProducts/";
-
 const MainPage = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0);
-      return () => {}
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        return () => {
+        }
     }, []);
-   const myRef = useRef();
-   const appBestRef = useRef();
-   return (
-      <sectionContext.Provider value={{ myRef }}>
-         <sectionAboutContext.Provider value={{ appBestRef }}>
-            <AppBanner />
-            <main>
-               <AppInfo />
-               <AppBestProducts />
-            </main>
-         </sectionAboutContext.Provider>
-      </sectionContext.Provider>
+    const myRef = useRef();
+    const appBestRef = useRef();
+    return (
+        <sectionContext.Provider value={{ myRef }}>
+            <sectionAboutContext.Provider value={{ appBestRef }}>
+                <AppBanner />
 
-   )
+                <main>
+                    <AppInfo />
+                    <AppBestProducts />
+                </main>
+
+            </sectionAboutContext.Provider>
+        </sectionContext.Provider>
+    )
 }
 
 export default MainPage;

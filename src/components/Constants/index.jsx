@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
-import aromisticoCoffee from "../../resourses/images/Coffee/AromisticoCoffee.png";
-import solimoCoffee from "../../resourses/images/Coffee/SolimoCoffee.png";
-import prestoCoffee from "../../resourses/images/Coffee/PrestoCoffee.png";
+import aromisticoCoffee from "../../resourses/images/Coffee/Aromistico.jpg";
+import solimoCoffee from "../../resourses/images/Coffee/Solimo.jpg";
+import prestoCoffee from "../../resourses/images/Coffee/Presto.jpg";
 
 
 export const postItems = [
