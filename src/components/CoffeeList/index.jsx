@@ -39,7 +39,7 @@ const CoffeeList = () => {
             <SwitchTransition>
                <CSSTransition
                   key={id}
-                  timeout={500}
+                  timeout={300}
                   classNames="fade"
                >
                   <ItemContainer>

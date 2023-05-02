@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect } from "react";
 import { useRef } from "react";
 import { sectionContext, sectionAboutContext } from "../../Context";
@@ -13,17 +14,24 @@ const MainPage = () => {
     const myRef = useRef();
     const appBestRef = useRef();
     return (
-        <sectionContext.Provider value={{ myRef }}>
-            <sectionAboutContext.Provider value={{ appBestRef }}>
-                <AppBanner />
+        <>
+            <Helmet>
+                <meta name="description" content="Coffee house" />
+                <title>Coffee house</title>
+            </Helmet>
+            <sectionContext.Provider value={{ myRef }}>
+                <sectionAboutContext.Provider value={{ appBestRef }}>
+                    <AppBanner />
 
-                <main>
-                    <AppInfo />
-                    <AppBestProducts />
-                </main>
+                    <main>
+                        <AppInfo />
+                        <AppBestProducts />
+                    </main>
 
-            </sectionAboutContext.Provider>
-        </sectionContext.Provider>
+                </sectionAboutContext.Provider>
+            </sectionContext.Provider>
+        </>
+
     )
 }
 

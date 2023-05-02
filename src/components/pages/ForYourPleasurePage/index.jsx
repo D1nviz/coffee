@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import { searchContext, filterContext } from "../../Context";
 import { forYourPleasureDescriotion } from "../../Constants";
@@ -16,6 +17,10 @@ const ForYourPleasurePage = () => {
    const [filter, setFilter] = useState("all");
    return (
       <>
+         <Helmet>
+         <meta name="description" content="For your pleasure page" />
+         <title>For your pleasure</title>
+         </Helmet>
          <AppHeader
             text={"For your pleasure"}
             background={background}

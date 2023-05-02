@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-
+import { Helmet } from "react-helmet";
 import { postItems } from "../../Constants";
 import AppHeader from "../../AppHeader";
 import AppProductsInfo from "../../AppProductsInfo";
@@ -8,10 +8,15 @@ import background from "../../../resourses/images/backgrounds/ourCoffee.png";
 
 const SingleCoffeePage = () => {
    const { coffeId } = useParams();
-   const currentItem = postItems.filter(item => item.id === coffeId);
-   const { description, price, country } = currentItem[0];
+   console.log(postItems, coffeId)
+   const currentItem = postItems.find(item => `${item.id}` === `${coffeId}`);
+   
+   const { description, price, country, title } = currentItem;
    return (
       <>
+         <Helmet>
+            <title>{title}</title>
+         </Helmet>
          <AppHeader
             background={background}
             text={"Our Coffee"}

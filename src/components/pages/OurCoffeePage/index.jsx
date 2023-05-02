@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import { searchContext, filterContext } from "../../Context";
 import { ourCoffeDesripiton } from "../../Constants";
@@ -17,6 +18,10 @@ const OurCoffePage = () => {
    const [filter, setFilter] = useState("all");
    return (
       <>
+         <Helmet>
+            <meta name="description" content="Our Coffee" />
+            <title>Our Coffee</title>
+         </Helmet>
          <AppHeader
             text={"Our coffee"}
             background={background}
