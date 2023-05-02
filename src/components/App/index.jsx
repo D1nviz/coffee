@@ -2,12 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Spinner from "../Spinner/Spinner";
 import AppFooter from "../AppFooter/";
+import SingleCoffeePage from "../pages/SingleCoffeePage";
 
 const MainPage = lazy(() => import("../pages/MainPage/"));
 const OurCoffePage = lazy(() => import("../pages/OurCoffeePage/"));
 const ForYourPleasurePage = lazy(() => import("../pages/ForYourPleasurePage/"));
-const SingleCoffeePage = lazy(() => import("../pages/SingleCoffeePage"));
-
 function App() {
   return (
     <Router basename="coffee" >

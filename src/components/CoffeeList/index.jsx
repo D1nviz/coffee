@@ -35,9 +35,9 @@ const CoffeeList = () => {
 
    const renderPosts = () => (
       <CoffeeListGrid>
-         {filteredPosts.map(({ id, title, country, price, img }) => (
-            <SwitchTransition>
-               <CSSTransition
+         {filteredPosts.map(({ id, title, country, price, img }, i) => (
+            <SwitchTransition key={i}>
+               <CSSTransition  
                   key={id}
                   timeout={300}
                   classNames="fade"

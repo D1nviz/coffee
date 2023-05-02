@@ -15,7 +15,7 @@ import {
 
 const bestPosts = postItems.slice(0, 3).map(({ title, price, img, id }) => {
    return (
-      <Link to={`/${id}`}>
+      <Link to={`/${id}`} key={id}> 
          <BestCardItem>
             <CardItemThumbnail src={img} alt={title} />
             <CardItemTitle>{title}</CardItemTitle>
